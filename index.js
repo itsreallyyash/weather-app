@@ -6,14 +6,13 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
 
-    const APIKey = 'd5331501d8c2456689c90417230907';
+    const APIKey = '097fd1dab54cadbdefbd4fc1b94e4c69';
     const city = document.querySelector('.search-box input').value;
 
     if (city === '')
         return;
 
-    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
-    fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}&aqi=no`)
+    fetch(`//api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
 
         .then(response => response.json())
         .then(json => {
